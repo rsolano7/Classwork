@@ -1,8 +1,12 @@
 ---
 title: "Classwork Activity"
-author: "Enter Your Name"
+author: "Rene Solano"
 output: html_notebook
 ---
+
+```{r}
+library(tidyverse)
+```
 
 
 # Instructions (Step by Step)
@@ -27,15 +31,17 @@ head(students)
 
 ```{r}
 # Remove the Name column
-
+Students_Clean <- students %>%
+  select(-Name)
+Students_Clean
 ```
 
 
 ### Question:
 Why might someone drop a column like name or ID from a dataset?
 
-### Answer:
-
+### Answer: Someone might drop a cloumn like name or ID from a dataset because they might want to work with data that is anonomous or the id could be removed becuase it it the same as the Rank for R, numbers in order.
+id 
 ## Step 3: Visualize
 ```{r}
 library(ggplot2)
@@ -62,16 +68,25 @@ ggplot(Students_Clean, aes(x = Major, y = Satisfaction, fill = Major)) +
 3. Do you think this chart is accurate?
 4. Why? Why not?
 
+### Answers: 1. They all have some values in between 8 and 6. Computer Science and Data Science have similar medians. The ranges are all different in length as well as the interquartile range.
+### Answers: 2. The different data that is collected is randomly generated so depending on the data generated the outcome is shown.
+### Answers: 3. I don't this chart is accurate.
+### Answers: 4. I think because the data is randomly generated or artifically made.
+
 ## Step 5: Questions on Git, GitHub and R Markdown
 
 ### Questions:
 
 1. What does git add do?
+### Answers: Git add adds the changes to Gitbash and prepares it to commit.
 2. What is the difference between git commit and git push?
+### Answers: The difference between git commit and git push is that with git commit prepares gitbash to push but still stay in the terminal, git push makes it offical and takes it from Git bash to Git Hub.
 3. Why is it useful to use GitHub for your code or data projects?
+### Answers: It allows you to organized and edit Data efficiently and with ease, forking and collaborating helps you to take the data without changing the orginal data. 
 4. How could version control help when collaborating?
+### Answers: It allows you to see the different versions of the data and allows flexability when working with others.
 5. What is the difference between a code chunk and regular text in R Markdown?
+### Answers: Code chunk is code that you are performing while text is simply information to be seen. 
 6. How could R Markdown help you explain your analysis to someone else?
-
-### Answers:
+### Answers: Visualization
 
